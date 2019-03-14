@@ -256,7 +256,7 @@ $(document).ready(function(){
    var parallaxScene = new ScrollMagic.Scene({
        triggerElement:'.about',
        triggerHook:1,
-       duration:'200%'
+       duration:'150%'
    })
    .setTween(TweenMax.from('.dot-bg', 1, {y: '-55%', ease:Power0.easeNone}))
    .addTo(controller);
@@ -266,8 +266,11 @@ $(document).ready(function(){
 
 
 
-(function($) {
+ (function($) {
     $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+    $('.accordion > li:eq(1) a').addClass('active').next().slideDown();
+    $('.accordion > li:eq(2) a').addClass('active').next().slideDown();
+    $('.accordion > li:eq(3) a').addClass('active').next().slideDown();
 
     $('.accordion a').click(function(j) {
         var dropDown = $(this).closest('.acc-list').find('.acc-content');
@@ -286,4 +289,42 @@ $(document).ready(function(){
         j.preventDefault();
     });
 })(jQuery);
+
+ (function($) {
+
+
+    $('.accordion2 a').click(function(k) {
+        var dropDown2 = $(this).closest('.acc-list').find('.acc-content2');
+
+        $(this).closest('.accordion2').find('.acc-content2').not(dropDown2).slideUp();
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).closest('.accordion2').find('a.active').removeClass('active');
+            $(this).addClass('active');
+        }
+
+        dropDown2.stop(false, true).slideToggle();
+
+        k.preventDefault();
+    });
+})(jQuery);
+
+
+
+$(document).ready(function() {
+    // This will fire when document is ready:
+    $(window).resize(function() {
+        // This will fire each time the window is resized:
+        if($(window).width() >= 830) {
+            // if larger or equal
+            $('.acc-content').show();
+        } else {
+            // if smaller
+            $('.acc-content').hide();
+        }
+    }).resize(); // This will simulate a resize to trigger the initial run.
+});
+
 

@@ -54,7 +54,7 @@ $(document).on('ready', function() {
           breakpoint: 480,
           settings: {
             centerPadding: '0px',
-            variableWidth: false,
+            variableWidth: true,
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -63,7 +63,7 @@ $(document).on('ready', function() {
           breakpoint: 330,
           settings: {
             centerPadding: '0px',
-            variableWidth: false,
+            variableWidth: true,
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -74,20 +74,21 @@ $(document).on('ready', function() {
 });
 
 $(document).on('ready', function() {
-        $(".traffic-slide").slick({
-            dots: false,
-            prevArrow: '<div class="slide-arrow prev-arrow"><img src="images/slide-prev.svg" alt=""></div>',
-            nextArrow: '<div class="slide-arrow next-arrow"><img src="images/slide-next.svg" alt=""></div>',
-            infinite: true,
+        $(".map-slider").slick({
+            dots: true,
+            arrows: true,
+            infinite: false,
+            centerMode: true,
+            centerPadding: '0px',
             variableWidth: false,
             speed: 800,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 1,
+
             responsive: [{
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 },
                 {

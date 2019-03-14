@@ -40,16 +40,16 @@ function init() {
 
 
 
-    var mapElement = document.getElementById('map');
+    var mapElement = document.getElementById('map2');
     var image = {
     url: 'http://pgnini.org/kindness-test/images/map-icon-60.svg',
     scaledSize: new google.maps.Size(140, 200),
      }
-    var map = new google.maps.Map(mapElement, mapOptions);
+    var map2 = new google.maps.Map(mapElement, mapOptions);
 
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(22.657937, 120.285922),
-        map: map,
+        map: map2,
         optimized: false,
         icon: image
     });
