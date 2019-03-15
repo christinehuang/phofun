@@ -21,3 +21,6 @@ function scrollFunction() {
     document.getElementById("hamburger").setAttribute("style", "opacity:0;");
   }
 }
+
+
+

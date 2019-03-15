@@ -253,6 +253,78 @@ $(document).ready(function(){
   .addTo(controller);
   });
 
+  $('.backtotop').each(function(){
+
+    //build a scene
+  var ourScene22 = new ScrollMagic.Scene({
+      triggerElement: '#secrets',
+      triggerHook: 0.4,
+      reverse: true
+  })
+  .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
+  .addTo(controller);
+  });
+
+  $('.one').each(function(){
+
+    //build a scene
+  var ourScene23 = new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.7,
+      reverse: true
+  })
+  .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
+  .addTo(controller);
+  });
+
+   $('.menu-combo').each(function(){
+
+    //build a scene
+  var ourScene24 = new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.7,
+      reverse: true
+  })
+  .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
+  .addTo(controller);
+  });
+
+    $('.appet-list').each(function(){
+
+    //build a scene
+  var ourScene25 = new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.7,
+      reverse: true
+  })
+  .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
+  .addTo(controller);
+  });
+
    var parallaxScene = new ScrollMagic.Scene({
        triggerElement:'.about',
        triggerHook:1,
@@ -271,6 +343,7 @@ $(document).ready(function(){
     $('.accordion > li:eq(1) a').addClass('active').next().slideDown();
     $('.accordion > li:eq(2) a').addClass('active').next().slideDown();
     $('.accordion > li:eq(3) a').addClass('active').next().slideDown();
+    $('.accordion > li:eq(4) a').addClass('active').next().slideDown();
 
     $('.accordion a').click(function(j) {
         var dropDown = $(this).closest('.acc-list').find('.acc-content');

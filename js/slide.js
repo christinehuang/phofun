@@ -45,7 +45,7 @@ $(document).on('ready', function() {
           breakpoint: 600,
           settings: {
             centerPadding: '0px',
-            variableWidth: false,
+            variableWidth: true,
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -76,7 +76,7 @@ $(document).on('ready', function() {
 $(document).on('ready', function() {
         $(".map-slider").slick({
             dots: true,
-            arrows: true,
+            arrows: false,
             infinite: false,
             centerMode: true,
             centerPadding: '0px',
@@ -102,8 +102,6 @@ $(document).on('ready', function() {
                 {
                     breakpoint: 600,
                     settings: {
-                        prevArrow: '<div class="slide-arrow prev-arrow white"><img src="images/slide-prev-w.svg" alt=""></div>',
-                        nextArrow: '<div class="slide-arrow next-arrow white"><img src="images/slide-next-w.svg" alt=""></div>',
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
