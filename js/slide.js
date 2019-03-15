@@ -45,7 +45,7 @@ $(document).on('ready', function() {
           breakpoint: 600,
           settings: {
             centerPadding: '0px',
-            variableWidth: true,
+            variableWidth: false,
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -54,7 +54,7 @@ $(document).on('ready', function() {
           breakpoint: 480,
           settings: {
             centerPadding: '0px',
-            variableWidth: true,
+            variableWidth: false,
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -63,7 +63,7 @@ $(document).on('ready', function() {
           breakpoint: 330,
           settings: {
             centerPadding: '0px',
-            variableWidth: true,
+            variableWidth: false,
             slidesToShow: 1,
             slidesToScroll: 1
           }
