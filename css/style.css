@@ -593,14 +593,15 @@ html[lang="en"] .news-btn {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     max-width: 1990px;
-    width: 100%;
+    width: 85%;
     height: 70px;
-    padding-left: 5%;
+    padding-left: 10%;
     padding-right: 5%;
     margin: 0 auto;
+    align-items: center;
 }
 
 .navbar_logo {
@@ -610,18 +611,26 @@ html[lang="en"] .news-btn {
     /* IE10 */
     display: inline-flex;
     align-items: center;
-    min-width: 178px;
+    height: 70px;
 }
 
 .navbar_logo img {
-    width: 100%;
+    width: auto;
+    height: 32px;
 }
 
 .navbar_logo a {
     display: inline-block;
     position: relative;
 }
-
+.nav-subtxt{
+    font-family: 'Asap', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 2px;
+    padding: 0px 9px;
+}
 .nav-logo-b {
     opacity: 1;
     -webkit-transition: all 1s;
@@ -1895,7 +1904,7 @@ html[lang="en"] .news-btn {
 .btp-arrow{
     position: relative;
     width: 10px;
-    right: 6.5px;
+    right: 7px;
     bottom: -5px;
 }
 .backtotop a:hover .btp-bar{
@@ -2638,7 +2647,7 @@ display: inline-block; width: 60%;
     }
 
     .nav1200-logo {
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
 
     .nav1200-left .nav1200-icons {
@@ -3200,9 +3209,9 @@ display: inline-block; width: 60%;
         /* IE10 */
         display: flex;
         flex-direction: column;
-        background-color: #FFF;
+        background-color: #ffc522;
         position: fixed;
-        top: -70px;
+        top: 0px;
         width: 100%;
         height: 70px;
         transition: 0.6s;
@@ -3211,17 +3220,33 @@ display: inline-block; width: 60%;
         -webkit-transition: all 1s ease-out;
         transition: all 1s ease-out;
     }
-
+    .hamburger {
+    opacity: 1;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    }
+    .hamburger div {
+    position: relative;
+    width: 24px;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #000;
+    margin: 2px auto;
+    transition: all 0.3s ease-in-out;
+    }
+    #hamburger{
+       opacity: 1!important;
+    }
+    .hamburger:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid #CCC;
+     }
     .light_menu {
         height: 80px;
     }
 
     .light-logo {
         height: 80px;
-    }
-
-    .hamburger {
-        top: 22px;
     }
 
     .banner-arrow {
@@ -3256,7 +3281,7 @@ display: inline-block; width: 60%;
         text-align: center;
         margin: 10px auto;
         width: 100vw;
-        height: 8vh;
+        height: 18vh;
         padding-top: 0%;
     }
 
@@ -3332,11 +3357,11 @@ display: inline-block; width: 60%;
     .banner-overlay {
     display: none;
     width: 100vw;
-    height: 70vh;
+    height: 82vh;
     }
     .top-banner {
     width: 100vw;
-    height: 70vh;
+    height: 82vh;
     }
     .top-banner img {
     width: 80%;
@@ -3397,6 +3422,71 @@ display: inline-block; width: 60%;
     width: 280%;
     right: 90%;
     position: relative;
+    }
+    .nav-subtxt{
+    font-family: 'Asap', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0px;
+    padding: 0px 9px;
+    }
+    .nav-container {
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-left: 5px;
+    margin-right: 35px;
+   }
+   .menu-title1 span {
+    position: absolute;
+    display: block;
+    width: 180px;
+    top: -100px;
+    left: -60%;
+    z-index: 9;
+    }
+   .menu-title1 span img {
+    width: 100px;
+    }
+    .drink-title {
+    position: relative;
+    width: 80%;
+    height: 150px;
+    bottom: -30px;
+    margin: 0 auto;
+    z-index: 5;
+    background-image: url(../images/drink-title.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   .drink-title-icon {
+    width: 60px;
+    right: 15%;
+    bottom: -50px;
+    position: absolute;
+    z-index: 4;
+    }
+    .map-slider .slick-dots {
+    position: absolute;
+    bottom: 65vh;
+    left: 6%;
+    display: block;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    }
+    #toggle:checked+.hamburger .top {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 8px;
+    }
+    #toggle:checked+.hamburger .meat {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -5px;
     }
 }
 
