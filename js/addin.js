@@ -84,6 +84,11 @@ $(document).ready(function(){
       reverse: true
   })
   .setClassToggle('#content3-more-b', 'dis') //add class to section1-pic
+  .addIndicators({
+    name: 'disnone',
+    colorTrigger: '#c90',
+    colorStart: '#F60',
+  })//this is requires a plugin
   .addTo(controller);
 
   var ourScene14 = new ScrollMagic.Scene({
@@ -92,6 +97,11 @@ $(document).ready(function(){
       reverse: true
   })
   .setClassToggle('#content3-more-w', 'show') //add class to section1-pic
+  .addIndicators({
+    name: 'disshow',
+    colorTrigger: '#c90',
+    colorStart: '#F60',
+  })//this is requires a plugin
   .addTo(controller);
 
     var ourScene5 = new ScrollMagic.Scene({
@@ -100,6 +110,12 @@ $(document).ready(function(){
       reverse: true
   })
   .setClassToggle('#section3-pic', 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'pic3 fade5',
+    colorTrigger: '#c90',
+    colorStart: '#F60',
+    colorEnd: 'Pink'
+  })//this is requires a plugin
   .addTo(controller);
 
   var ourScene6 = new ScrollMagic.Scene({
@@ -108,6 +124,12 @@ $(document).ready(function(){
       reverse: true
   })
   .setClassToggle('#section3-txt', 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'txt2 fade5',
+    colorTrigger: '#c90',
+    colorStart: '#F60',
+    colorEnd: 'Pink'
+  })//this is requires a plugin
   .addTo(controller);
 
 
@@ -120,6 +142,12 @@ $(document).ready(function(){
       reverse: true
   })
   .setClassToggle(this, 'white') //add class to section1-pic
+  .addIndicators({
+    name: 'newsinfo',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
   .addTo(controller);
   });
 
@@ -132,6 +160,12 @@ $(document).ready(function(){
       reverse: true
   })
   .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'abouttxtpic',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
   .addTo(controller);
   });
 
@@ -144,6 +178,12 @@ $(document).ready(function(){
       reverse: true
   })
   .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
   .addTo(controller);
   });
 
@@ -152,10 +192,16 @@ $(document).ready(function(){
     //build a scene
   var ourScene23 = new ScrollMagic.Scene({
       triggerElement: this,
-      triggerHook: 0.6,
+      triggerHook: 0.7,
       reverse: false
   })
   .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
   .addTo(controller);
   });
 
@@ -168,6 +214,12 @@ $(document).ready(function(){
       reverse: true
   })
   .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
   .addTo(controller);
   });
 
@@ -180,6 +232,12 @@ $(document).ready(function(){
       reverse: false
   })
   .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
   .addTo(controller);
   });
 
@@ -192,6 +250,12 @@ $(document).ready(function(){
       reverse: false
   })
   .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addIndicators({
+    name: 'backtotop',
+    colorTrigger: '#F90',
+    colorStart: '#F60',
+    indent: 150
+  })//this is requires a plugin
   .addTo(controller);
   });
 

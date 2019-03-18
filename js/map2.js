@@ -42,8 +42,8 @@ function init() {
 
     var mapElement = document.getElementById('map2');
     var image = {
-    url: 'http://pgnini.org/kindness-test/images/map-icon-60.svg',
-    scaledSize: new google.maps.Size(140, 200),
+     url: 'http://pgnini.org/phofun/images/map-icon.svg',
+    scaledSize: new google.maps.Size(40, 60),
      }
     var map2 = new google.maps.Map(mapElement, mapOptions);
 
