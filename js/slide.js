@@ -18,8 +18,8 @@ $(document).on('ready', function() {
         centerPadding: '0px',
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 4200, 
+        autoplay: true,
+        autoplaySpeed: 4800, 
         responsive: [
         {
           breakpoint: 1024,

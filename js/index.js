@@ -207,6 +207,18 @@ $(document).ready(function(){
   .addTo(controller);
   });
 
+  $('.btp-mobile').each(function(){
+
+    //build a scene
+  var ourScene27 = new ScrollMagic.Scene({
+      triggerElement: '#secrets2',
+      triggerHook: 0.7,
+      reverse: true
+  })
+  .setClassToggle(this, 'fade-in') //add class to section1-pic
+  .addTo(controller);
+  });
+
    var parallaxScene = new ScrollMagic.Scene({
        triggerElement:'.about',
        triggerHook:1,
