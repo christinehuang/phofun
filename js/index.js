@@ -147,6 +147,18 @@ $(document).ready(function(){
   .addTo(controller);
   });
 
+  $('.backtotop').each(function(){
+
+    //build a scene
+  var ourScene28 = new ScrollMagic.Scene({
+      triggerElement: '#contact',
+      triggerHook: 0.4,
+      reverse: true
+  })
+  .setClassToggle(this, 'fade-up') //add class to section1-pic
+  .addTo(controller);
+  });
+
   $('.one').each(function(){
 
     //build a scene
@@ -164,7 +176,7 @@ $(document).ready(function(){
     //build a scene
   var ourScene24 = new ScrollMagic.Scene({
       triggerElement: this,
-      triggerHook: 0.7,
+      triggerHook: 0.9,
       reverse: true
   })
   .setClassToggle(this, 'fade-in') //add class to section1-pic
@@ -200,7 +212,7 @@ $(document).ready(function(){
        triggerHook:1,
        duration:'150%'
    })
-   .setTween(TweenMax.from('.dot-bg', 1, {y: '-55%', ease:Power0.easeNone}))
+   .setTween(TweenMax.from('.dot-bg', 1, {y: '-45%', ease:Power0.easeNone}))
    .addTo(controller);
 
     var parallaxScene = new ScrollMagic.Scene({
@@ -208,7 +220,7 @@ $(document).ready(function(){
        triggerHook:1,
        duration:'150%'
    })
-   .setTween(TweenMax.from('.dot-bg2', 1, {y: '-55%', ease:Power0.easeNone}))
+   .setTween(TweenMax.from('.dot-bg2', 1, {y: '-50%', ease:Power0.easeNone}))
    .addTo(controller);
 
    var parallaxScene = new ScrollMagic.Scene({
@@ -216,7 +228,7 @@ $(document).ready(function(){
        triggerHook:1,
        duration:'150%'
    })
-   .setTween(TweenMax.from('.dot-bg3', 1, {y: '55%', ease:Power0.easeNone}))
+   .setTween(TweenMax.from('.dot-bg3', 1, {y: '-58%', ease:Power0.easeNone}))
    .addTo(controller);
 
 
