@@ -801,17 +801,19 @@ html[lang="en"] .news-btn {
 .about-bottom-txt .tag-y{
     padding-left: 0% !important;
     margin-top: 0px;
-    margin-left: -4%;
+    margin-left: 0%;
 }
 
 
 .about-top-txt h2 {
     color: #000;
     font-size: 30px;
+    line-height: 33px;
     font-weight: 700;
     letter-spacing: 3px;
     padding-left: 15%;
     padding-right: 4%;
+    padding-bottom: 2%;
 }
 
 .about-top-txt h3 {
@@ -837,7 +839,7 @@ html[lang="en"] .news-btn {
 
 .tag-y {
     color: #000;
-    padding-left: 12%;
+    padding-left: 15%;
     margin-top: 45px;
     margin-bottom: 8px;
 }
@@ -861,8 +863,18 @@ html[lang="en"] .news-btn {
 
 
 .menu-y p {
-    margin-left: -27px!important;
+    margin-left: 0px!important;
     background-image: url(../images/menu-notext.svg)!important;
+    text-align: center!important;
+}
+
+.menu-span {
+    display: block;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: .96px;
+    height: 86px!important;
 }
 
 .tag-y p {
@@ -872,8 +884,8 @@ html[lang="en"] .news-btn {
     font-weight: 500!important;
     line-height: 28px!important;
     height: 28px!important;
-    padding-left: 25px!important;
-    padding-right: 25px!important;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
     margin-bottom: 1px!important;
     background-image: url(../images/about-tag-bg.svg);
     background-repeat: no-repeat;
@@ -1016,6 +1028,7 @@ html[lang="en"] .news-btn {
     background-image: url(../images/about-dot-bg.svg);
     background-repeat: no-repeat;
     background-position: left top;
+     -ms-background-size: 182px 462px;
     background-size: 16%;
 }
 
@@ -1030,6 +1043,7 @@ html[lang="en"] .news-btn {
     background-image: url(../images/about-dot-bg.svg);
     background-repeat: no-repeat;
     background-position: right top;
+     -ms-background-size: 182px 462px;
     background-size: 16%;
 }
 
@@ -1044,6 +1058,7 @@ html[lang="en"] .news-btn {
     background-image: url(../images/dot-bg-light.svg);
     background-repeat: no-repeat;
     background-position: left top;
+     -ms-background-size: 182px 462px;
     background-size: 16%;
 }
 
@@ -1096,6 +1111,7 @@ html[lang="en"] .news-btn {
 
 .menu-title1 span img {
    width: 190px;
+   margin-top: -30px;
 }
 
 .menu-wrapper {
@@ -1181,7 +1197,9 @@ html[lang="en"] .news-btn {
     padding-left: 5%;
     display: inline-block;
 }
-
+.menu-txt {
+    color: #000!important;
+}
 .menu-wrapper li .menu-txt hr {
     width: 100%;
     display: inline-block;
@@ -1223,7 +1241,7 @@ html[lang="en"] .news-btn {
     margin: 15px 0;
 }
 .menu-txt .tag-y {
-    padding-left: 12px;
+    padding-left: 0px;
     margin-top: 0px;
 }
 .menu-nopic .menu-txt {
@@ -1264,6 +1282,7 @@ html[lang="en"] .news-btn {
     width: 50%;
 }
 .spice img{
+    width: 14.88px;
     height: 24px;
 }
 /*=========================menu===============================*/
@@ -1648,7 +1667,7 @@ html[lang="en"] .news-btn {
     top: 0px;
     border-radius: 50%;
     width: 39px;
-    height: 38px;
+    height: 37px;
     background-color:  #fff3d3;
     z-index: 2;
     -webkit-transition: all 0.2s ease-in-out;
@@ -1664,7 +1683,7 @@ html[lang="en"] .news-btn {
     top: 0px;
     border-radius: 50%;
     width: 39px;
-    height: 38px;
+    height: 37px;
     background-color: #fff3d3;
     background-image: url(../images/arrow-b.svg);
     background-position: right center;
@@ -1734,7 +1753,7 @@ html[lang="en"] .news-btn {
 
 .acc-button p:hover:after {
     right: -23px;
-    top: -1px;
+    top: 0px;
     background-image: url(../images/arrow.svg);
 }
 .acc-button .active p:hover:after {
@@ -1752,14 +1771,26 @@ html[lang="en"] .news-btn {
     height: 41px;
 }
 
-.acc-button2 p:hover:after {
+.acc-button2 .active p:hover:after {
     right: -23px;
     top: -1px;
     background-image: url(../images/arrow.svg);
 }
 
+.acc-button2 .active p:hover:before {
+    left: -23px;
+    top: -1px;
+}
+
+.acc-button2 p:hover:after {
+    right: -23px;
+    top: 0px;
+    background-image: url(../images/arrow.svg);
+}
+
 .acc-button2 p:hover:before {
     left: -23px;
+    top: -1px;
 }
 
 .blueline {
@@ -1790,12 +1821,15 @@ html[lang="en"] .news-btn {
 }
 
 .top-links {
+    display: block;
+    position: absolute;
     width: 30%;
     font-size: 15px;
     font-weight: 500;
     text-align: right;
-    margin-right: 5%;
-    margin-top: 3.5%;
+    right: 5%;
+    top: 18%;
+    z-index: 999;
 }
 
 .top-links ul {
@@ -1891,7 +1925,6 @@ html[lang="en"] .news-btn {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    max-width: 1990px;
     margin: 0 auto;
     position: relative;
 }
@@ -1915,7 +1948,7 @@ html[lang="en"] .news-btn {
     letter-spacing: 2px;
     top: 76%;
      -webkit-writing-mode: vertical-lr;
-     -ms-writing-mode: vertical-lr;
+     -ms-writing-mode: tb-lr;
     writing-mode: vertical-rl; 
     z-index: 9;
 }
@@ -1947,7 +1980,7 @@ html[lang="en"] .news-btn {
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
      -webkit-writing-mode: vertical-lr;
-     -ms-writing-mode: vertical-lr;
+     -ms-writing-mode: tb-lr;
     writing-mode: vertical-rl; 
     z-index: 9;
      transform: translateY(50px);
@@ -2427,13 +2460,14 @@ footer {
 }
 
 .store{
-     margin-bottom: 2%;
+    margin-bottom: 2%;
     height: 25px;
     font-family: 'Roboto', sans-serif; 
     font-weight: 600;
     background-image: url(../images/store-bg.svg);
     background-position: left;
     background-repeat: no-repeat;
+    background-size: 92px 25px;
     color: #000;
 }
 .store p{
@@ -2449,6 +2483,7 @@ footer {
     background-image: url(../images/open-bg.svg);
     background-position: left;
     background-repeat: no-repeat;
+    background-size: 68.5px 25px;
     color: #000;
 }
 .open p{
@@ -2464,6 +2499,7 @@ footer {
     background-image: url(../images/more-bg.svg);
     background-position: left;
     background-repeat: no-repeat;
+    background-size: 105px 25px;
     color: #000;
 }
 .more p{
@@ -2489,10 +2525,18 @@ footer {
     padding-bottom: 0px;
     overflow: hidden;
 }
-.appet-wrapper ul{
+.appet-wrapper-ul{
     width: 100%!important;
+    display: -webkit-flex;
+    /* Safari */
+    display: -ms-flex;
+    /* IE10 */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
 }
-.drink ul{
+.drink-wrapper{
     position: relative;
     width: 105%!important;
     left:-2.5%;
@@ -2569,13 +2613,13 @@ footer {
 
 .appet-wrapper.drink img{
    width:50%;
-   margin-top: 20px;
+   margin-top: 55px;
 }
 .drink .drink-list {
     width: 26%;
     text-align: center;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 20px;
 }
 
@@ -2589,6 +2633,11 @@ footer {
 }
 .appet-txt span{
     font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+.appet-txt sub{
+    font-size: 14px;
 }
 .drink-bg{
     display: block;
@@ -2603,13 +2652,26 @@ footer {
     padding-left: 8%;
     z-index: 2;
 }
-
+#drink-desk{
+    display: block;
+}
+#drink-mobile{
+        display: none;
+}
 .appet-wrapper .accordion {
     display: inline-block;
     width: 100%!important;
 }
 .drink-acc{
 display: inline-block; width: 60%;
+}
+.drink-acc-wrapper{
+    display: -webkit-flex!important;
+    display: -ms-flex!important;
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .drink-acc .acc-drink {
     width: 42%;
@@ -2746,7 +2808,7 @@ display: inline-block; width: 60%;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
      -webkit-writing-mode: vertical-lr;
-     -ms-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
     writing-mode: vertical-rl; 
     z-index: 9;
      transform: translateY(50px);
@@ -2764,7 +2826,7 @@ display: inline-block; width: 60%;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
      -webkit-writing-mode: vertical-lr;
-     -ms-writing-mode: vertical-lr;
+     -ms-writing-mode: tb-lr;
     writing-mode: vertical-rl; 
     z-index: 9;
      transform: translateY(50px);
@@ -2783,7 +2845,7 @@ display: inline-block; width: 60%;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
      -webkit-writing-mode: vertical-lr;
-     -ms-writing-mode: vertical-lr;
+     -ms-writing-mode: tb-lr;
     writing-mode: vertical-rl; 
     z-index: 9;
      transform: translateY(50px);
@@ -2837,14 +2899,14 @@ display: inline-block; width: 60%;
     }
  #menu {
     position: relative;
-    top: -75%;
+    top: -72%;
     }
     .about {
     position: relative;
     width: 100%;
     background-color: #ffdc7a;
     padding-top: 2%;
-    padding-bottom: 44%;
+    padding-bottom: 52%;
     }
    .appet-bg {
     display: block;
@@ -2867,7 +2929,7 @@ display: inline-block; width: 60%;
     margin-bottom: -40px;
     background-color: #ffdc7a;
     padding-top: 44%;
-    padding-bottom: 20%;
+    padding-bottom: 14%;
     padding-right: 18%;
     padding-left: 8%;
     z-index: 2;
@@ -2897,10 +2959,10 @@ display: inline-block; width: 60%;
     position: absolute;
     width: 100%;
     max-width: 1680px;
-    height: 690px;
+    height: 890px;
     z-index: 0;
     left: -13%;
-    top: 22%;
+    top: 26%;
     background-image: url(../images/about-dot-bg.svg);
     background-repeat: no-repeat;
     background-position: left top;
@@ -2910,7 +2972,7 @@ display: inline-block; width: 60%;
     position: absolute;
     width: 80%;
     max-width: 1680px;
-    height: 690px;
+    height: 890px;
     z-index: 0;
     left: 11%;
     top: 140%;
@@ -2923,7 +2985,7 @@ display: inline-block; width: 60%;
     position: absolute;
     width: 80%;
     max-width: 1980px;
-    height: 690px;
+    height: 890px;
     z-index: 0;
     right: 11%;
     top: 69%;
@@ -2934,7 +2996,7 @@ display: inline-block; width: 60%;
    }
    .map-slider .slick-dots {
     position: absolute;
-    bottom: 8%;
+    bottom: 10%;
     right: 0;
     display: block;
     width: 34%;
@@ -2970,10 +3032,10 @@ display: inline-block; width: 60%;
     top: 1px;
    }
    .acc-button2 .active p::before {
-    top: 0px;
+    top: 1px;
    }
    .acc-button2 .active p::after {
-    top: 0px;
+    top: 1px;
    }
 }
 
@@ -2985,7 +3047,24 @@ display: inline-block; width: 60%;
   
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1480px) {
+
+     .acc-button2 p::before {
+    top: 1px;
+   }
+   .acc-button2 p::after {
+    top: 1px;
+   }
+   .acc-button2 .active p::before {
+    top: 1px;
+   }
+   .acc-button2 .active p::after {
+    top: 1px;
+   }
+    .top-banner img {
+    width: auto;
+    height: 100vh;
+   }
     .nav-container {
         padding-left: 5%;
         padding-right: 5%;
@@ -3104,7 +3183,7 @@ display: inline-block; width: 60%;
    }
    .map-slider .slick-dots {
     position: absolute;
-    bottom: 12%;
+    bottom: 16%;
     right: 0;
     display: block;
     width: 34%;
@@ -3114,33 +3193,288 @@ display: inline-block; width: 60%;
     text-align: left;
     }
 }
+@media only screen and (max-width: 1380px) {
 
-@media only screen and (max-width: 1200px) {
+   .acc-button2 p::before {
+    top: 1px;
+   }
+   .acc-button2 p::after {
+    top: 1px;
+   }
+   .acc-button2 .active p::before {
+    top: 1px;
+   }
+   .acc-button2 .active p::after {
+    top: 1px;
+   }
 
-    .navbar_link {
-        display: none;
+    #menu {
+    position: relative;
+    top: -58%;
     }
-
-    .light_menu {
-        display: block;
-        position: absolute;
-        top: 0;
-        width: 100vw;
-        height: 100px;
-        z-index: 99;
+    .about {
+    position: relative;
+    width: 100%;
+    background-color: #ffdc7a;
+    padding-top: 2%;
+    padding-bottom: 60%;
     }
-
-    .light-logo {
-        border-right: 0px solid #FFF;
-        height: 100px;
+    .map-info {
+    display: inline-block;
+    position: relative;
+    width: 38%;
+    height: 52vh;
+    float: right;
+    padding: 3% 4%;
     }
-
-
-    .menu-toggle {
-        display: block;
-    }
+    #map2 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 66vh;
+}
+#map {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 66vh;
+}
+.map-slider .slick-dots {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    display: block;
+    width: 34%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+.appet-bg {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin-right: 10%;
+    margin-top: -20%;
+    margin-bottom: 90px;
+    background-color: #ffe8a7;
+    padding-right: 8%;
+    padding-left: 18%;
+    z-index: 3;
+}
+.drink-title-icon {
+    display: block;
+    width: 110px;
+    right: 16%;
+    bottom: -130px;
+    position: absolute;
+    z-index: 4;
+}
 
 }
+@media only screen and (max-width: 1023px) {
+
+    #menu {
+    position: relative;
+    top: -72%;
+    }
+    .about {
+    position: relative;
+    width: 100%;
+    background-color: #ffdc7a;
+    padding-top: 2%;
+    padding-bottom: 78%;
+    }
+    .appet-bg {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin-right: 10%;
+    margin-top: -30%;
+    margin-bottom: 90px;
+    background-color: #ffe8a7;
+    padding-right: 8%;
+    padding-left: 18%;
+    z-index: 3;
+   }
+   .drink-title-icon {
+    display: block;
+    width: 100px;
+    right: 16%;
+    bottom: -130px;
+    position: absolute;
+    z-index: 4;
+   }
+   .map-info {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 52vh;
+    float: right;
+    padding: 5%;
+}
+.map-slider .slick-dots {
+    position: absolute;
+    bottom:  54%;
+    left: 5%;
+    display: block;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+.map-wrapper {
+    width: 62%;
+    display: inline-block;
+    float: left;
+    }
+    .about-top-txt h2 {
+    color: #000;
+    font-size: 26px;
+    line-height: 33px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-left: 15%;
+    padding-right: 4%;
+   }
+   .about-top-txt h3 {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 15%;
+    padding-right: 4%;
+    padding-bottom: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 22px;
+    color: #000;
+   }
+   .about-top-img {
+    width: 48%;
+    min-height: 450px;
+    overflow: hidden;
+    margin-top: 20%;
+   }
+   .about-bottom .about-top-img {
+    width: 48%;
+    min-height: 450px;
+    overflow: hidden;
+    margin-top: 0%;
+   }
+   .light-yellow-bg {
+    position: absolute;
+    top: 8%;
+    right: 0;
+    width: 90%;
+    height: 1020px;
+    z-index: 1;
+    background-color: #ffe8a7;
+   }
+   .more {
+    margin-top: 3%;
+    }
+}
+@media screen and (max-height: 1440px) {
+    .top-banner img {
+    width: auto;
+    height: 100vh;
+    }
+    .about {
+    position: relative;
+    width: 100%;
+    background-color: #ffdc7a;
+    padding-top: 2%;
+    padding-bottom: 37%;
+    }
+    #menu {
+    position: relative;
+    top: -18%;
+   }
+   .appet-bg {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin-right: 10%;
+    margin-top: 0%;
+    margin-bottom: 90px;
+    background-color: #ffe8a7;
+    padding-right: 8%;
+    padding-left: 18%;
+    z-index: 3;
+   }
+   .map-info {
+    display: inline-block;
+    position: relative;
+    width: 38%;
+    height: 52vh;
+    float: right;
+    padding: 3% 4%;
+   }
+   #map2 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 52vh;
+   }
+   #map {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 52vh;
+   }
+}
+
+
+@media screen and (max-height: 1367px) {
+    .top-banner img {
+    width: auto;
+    height: 100vh;
+    }
+    .about {
+    position: relative;
+    width: 100%;
+    background-color: #ffdc7a;
+    padding-top: 2%;
+    padding-bottom: 980px;
+    }
+    #menu {
+    position: relative;
+    top: -620px;
+   }
+   .appet-bg {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin-right: 10%;
+    margin-top: -400px;
+    margin-bottom: 90px;
+    background-color: #ffe8a7;
+    padding-right: 8%;
+    padding-left: 18%;
+    z-index: 3;
+   }
+   .map-info {
+    display: inline-block;
+    position: relative;
+    width: 38%;
+    height: 580px;
+    float: right;
+    padding: 3% 4%;
+   }
+   #map2 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 580px;
+   }
+   #map {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 580px;
+   }
+}
+
 @media screen and (max-height: 700px) {
     .top-banner img {
         width: 100vw;
@@ -3148,6 +3482,39 @@ display: inline-block; width: 60%;
     }
 }
 @media only screen and (max-width: 830px) {
+    #drink-mobile{
+        display: block;
+    }
+    #drink-desk{
+    display: none;
+}
+    .appet-txt{
+    color: #000;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: .5px;
+    font-weight: 500;
+}
+.appet-txt span{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+}
+.appet-txt sub{
+    display: block;
+    height: 15px;
+}
+    .appet-wrapper-ul {
+    width: auto!important;
+    display: inline-block;
+    }
+    .about-bottom .about-top-img {
+    width: 100%;
+    min-height: 360px;
+    overflow: hidden;
+    margin-top: 0%;
+   }
     .acc-button2 p::before {
     top: 0px;
    }
@@ -3158,8 +3525,9 @@ display: inline-block; width: 60%;
     top: 0px;
    }
    .acc-button2 .active p::after {
-    top: 0px;
+    top: 1px;
    }
+
    .acc-button p::before {
     top: 0px;
    }
@@ -3171,6 +3539,9 @@ display: inline-block; width: 60%;
    }
    .acc-button .active p::after {
     top: 0px;
+   }
+   .acc-button .active p:hover:after {
+    top: -1px;
    }
    .more {
     margin-top: 7%;
@@ -3529,12 +3900,13 @@ display: inline-block; width: 60%;
     top: 0;
     right: 0;
     width: 100%;
-    height: 1980px;
+    height: 1760px;
     z-index: 1;
     background-color: #ffe8a7;
 }
    .about {
     padding-top: 48%;
+    padding-bottom: 48%;
 }
    .about-top {
     width: 100%;
@@ -3542,7 +3914,7 @@ display: inline-block; width: 60%;
     }
     .about-title {
      position: absolute;
-    top:-800px;
+    top:-950px;
     width: 100%;
     }
     .about-title img {
@@ -3551,6 +3923,7 @@ display: inline-block; width: 60%;
    .about-top-img {
     width: 100%;
     min-height: 600px;
+    margin-top: 5%;
     }
     .about-top-img img {
      height : 100%;
@@ -3566,8 +3939,8 @@ display: inline-block; width: 60%;
     position: relative;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 40px;
-    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
     }
     .about-top-txt h2, .about-top-txt h3, .about-top-txt p{
     padding-left: 0%;
@@ -3619,7 +3992,7 @@ display: inline-block; width: 60%;
     text-align: center;
     padding-bottom: 45px;
     margin-bottom: 0;
-    margin-left: 0%!important;
+    margin-left: -2px!important;
     margin-right: 0%;
     padding-left: 8%;
     border-bottom: 2px dotted #1b1464;
@@ -3629,7 +4002,7 @@ display: inline-block; width: 60%;
     text-align: center;
     padding-bottom: 45px;
     margin-bottom: 0;
-    margin-left: 0%;
+    margin-left: 5px!important;
     margin-right: 0%;
     padding-left: 0%;
     padding-right: 6%;
@@ -3654,7 +4027,14 @@ display: inline-block; width: 60%;
     margin-bottom: 90px;
     padding-right: 8%;
     padding-left: 8%;
+    padding-top: 12%;
     z-index: 3;
+    }
+    .appet-title {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    top: -110px;
     }
     .en-icon {
      display: none;
@@ -3761,14 +4141,15 @@ display: inline-block; width: 60%;
     background-repeat: no-repeat;
     }
    .appet-wrapper.drink img {
-    width: 50%;
+    width: auto;
+    height: 112px;
     margin-top: 60px;
     }
     .drink .drink-list {
     margin-top: -30px;
     text-align: center;
     margin-left: 3%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     }
    .smile-iconw {
     display: none;
@@ -3792,17 +4173,24 @@ display: inline-block; width: 60%;
     height: 150px;
     top: -80px;
     left: 0px;
-    padding-bottom: 35%;
+    padding-bottom: 45%;
     padding-top: 2%;
    }
    .menu-title1 span {
     position: absolute;
     display: block;
     width: 180px;
-    top: -200px;
-    left: -70%;
+    top: -250px;
+    left: -60%;
     z-index: 9;
     }
+    .menu-subtitle {
+    width: 100%;
+    display: block;
+    padding-top: 115px;
+    padding-bottom: 30px;
+    overflow: hidden;
+   }
     .drink-title {
     position: relative;
     width: 100%;
@@ -3827,7 +4215,7 @@ display: inline-block; width: 60%;
     display: inline-block;
     position: relative;
     width: 100%;
-    height: 460px;
+    height: 540px;
     float: right;
     padding: 7%;
    }
@@ -3838,7 +4226,7 @@ display: inline-block; width: 60%;
     }
     .map-slider .slick-dots {
     position: absolute;
-    bottom: 52vh;
+    bottom: 52%;
     left: 6%;
     display: block;
     width: 90%;
@@ -3873,18 +4261,18 @@ display: inline-block; width: 60%;
     -moz-osx-font-smoothing: grayscale;
      }
      .acc-button2 a p {
-    padding-bottom: 9px;
-}
+    padding-bottom: 9.5px;
+     }
 
 .acc-button2 a p:hover {
-    padding-bottom: 9px;
+    padding-bottom: 9.5px;
     }
      .acc-button a p {
-    padding-bottom: 9px;
+    padding-bottom: 9.5px;
 }
 
 .acc-button a p:hover {
-    padding-bottom: 9px;
+    padding-bottom: 9.5px;
     }
     .drink-list{
     display: inline-block;
@@ -4160,12 +4548,29 @@ display: inline-block; width: 60%;
     margin-top: 0px;
     margin-left: -18px;
     }
+    .nav1200-right ul {
+     width: 85%;
+     border-top: 2px solid #000;
+     }
+    .nav1200-right a {
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.4s ease;
+   }
+   .appet-list {
+    width: 48%!important;}
 }
 
 @media only screen and (max-width: 480px) {
+
+    .about {
+    padding-top: 48%;
+    padding-bottom: 55%;
+}
      .about-title {
      position: absolute;
-    top:-230%;
+    top:-245%;
     width: 100%;
     }
     .about-title img {
@@ -4174,6 +4579,7 @@ display: inline-block; width: 60%;
    .about-top-img {
     width: 100%;
     min-height: 400px;
+    margin-bottom: 30px;
     }
     .light-yellow-bg {
     position: absolute;
@@ -4203,17 +4609,66 @@ display: inline-block; width: 60%;
     margin-left: 20px;
     margin-right: 25px;
     }
+    #menu {
+    width: 87%;
+    position: relative;
+    top: 0px;
+    }
+    .menu-main {
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-top: 48%;
+    padding-bottom: 5%;
+    background-color: #fff3d3;
+    width: 100%;
+    margin-top: -28%;
+    }
+    .menu-title1 {
+    position: absolute;
+    background-image: url(../images/menu-title1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    background-size: 90%;
+    width: 100%;
+    height: 150px;
+    top: -40px;
+    left: 0px;
+    padding-bottom: 35%;
+    padding-top: 2%;
+    }
    .menu-title1 span {
     position: absolute;
     display: block;
     width: 180px;
     top: -120px;
-    left: -70%;
+    left: -63%;
     z-index: 9;
     }
    .menu-title1 span img {
     width: 130px;
+    margin-top: -88px;
     }
+    .menu-subtitle {
+    padding-top: 0px;
+    }
+    .appet-bg {
+    width: 100%;
+    margin-right: 7.5%;
+    margin-top: 260px;
+    }
+    .appet-title {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    }
+    .smile-iconb {
+    position: absolute;
+    width: 90px;
+    height: auto;
+    top: -210px;
+    left: 40%;
+     }
     .drink-title {
     position: relative;
     width: 80%;
@@ -4234,9 +4689,15 @@ display: inline-block; width: 60%;
     position: absolute;
     z-index: 4;
     }
+    .map-title {
+    position: relative;
+    width: 90%;
+    height: 110px;
+    top: -9%;
+    }
     .map-slider .slick-dots {
     position: absolute;
-    bottom: 51%;
+    bottom: 57%;
     left: 6%;
     display: block;
     width: 90%;
@@ -4257,16 +4718,53 @@ display: inline-block; width: 60%;
     }
     .nav1200-logo-sub {
     font-size: 16px;}
+    .nav1200-right ul {
+     width: 85%;
+     border-top: 2px solid #000;
+     }
+     .nav1200-right a {
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.4s ease;
+    }
+    .mobile-acc {
+    display: block;
+    margin-top: -24px;
+    }
+    .map-info {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 490px;
+    float: right;
+    padding: 7%;
+   }
 }
 @media only screen and (max-width: 400px) {
-      .about-title {
+    #menu {
+    width: 87%;
+    position: relative;
+    top: 0px;
+  }
+    .about {
+    padding-top: 48%;
+    padding-bottom: 60%;
+   }
+    .about-title {
      position: absolute;
-    top:-190%;
+    top:-205%;
     width: 100%;
+    }
+    .map-info {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 495px;
     }
     .map-slider .slick-dots {
     position: absolute;
-    bottom: 51%;
+    bottom: 57%;
     left: 6%;
     display: block;
     width: 90%;
@@ -4275,17 +4773,43 @@ display: inline-block; width: 60%;
     list-style: none;
     text-align: left;
     }
+    .smile-iconb {
+    position: absolute;
+    width: 90px;
+    height: auto;
+    top: -210px;
+    left: 35%;
+   }
 }
 
 @media only screen and (max-width: 330px) {
+    #menu {
+    width: 85%;
+    position: relative;
+    top: 0px;
+  }
+  .mobile-acc {
+    display: block;
+    margin-top: -25px;
+}
+    .about {
+    padding-top: 48%;
+    padding-bottom: 78%;
+  }
       .about-title {
      position: absolute;
-    top:-174%;
+    top:-185%;
     width: 100%;
+    }
+    .map-info {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 480px;
     }
     .map-slider .slick-dots {
     position: absolute;
-    bottom: 48%;
+    bottom: 57%;
     left: 6%;
     display: block;
     width: 90%;
