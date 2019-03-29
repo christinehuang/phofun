@@ -310,4 +310,6 @@ $(document).ready(function() {
     }).resize(); // This will simulate a resize to trigger the initial run.
 });
 
-
+function closeFunction() {
+  document.getElementById("toggle").checked=false
+}

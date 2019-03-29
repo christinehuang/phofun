@@ -10,7 +10,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 
-<body>
+<body id="top">
     <header>
         <div class="light_menu">
             <div class="menu-container">
@@ -36,7 +36,7 @@
                     <div class="meat"></div>
                     <div class="bottom"></div>
                 </label>
-                <div class="nav1200">
+                <div id="mobilenav" class="nav1200">
                     <div class="nav-wrapper">
                         <nav class="mobile-nav">
                             <div class="nav1200-left">
@@ -45,13 +45,13 @@
                             </div>
                             <div class="nav1200-right">
                                 <ul>
-                                    <li><a href="#secrets"><span>Our Secrets ・</span>
+                                    <li><a onclick="closeFunction()" href="#secrets"><span>Our Secrets ・</span>
                                             <p>樂越秘訣</p>
                                         </a></li>
-                                    <li><a href="#menu-title"><span>Menu ・</span>
+                                    <li><a onclick="closeFunction()" href="#menu-title"><span>Menu ・</span>
                                             <p>樂越菜單</p>
                                         </a></li>
-                                    <li><a href="#contact"><span>Contact ・</span>
+                                    <li><a onclick="closeFunction()" href="#contact"><span>Contact ・</span>
                                             <p>分店資訊</p>
                                         </a></li>
                                 </ul>
@@ -80,9 +80,19 @@
     </header>
     <!--slider-->
     <div class="banner-overlay"></div>
-    <div class="scrolldown"><a href="#secrets">SCROLL DOWN <img src="images/scroll-down.svg" alt=""> </a></div>
-    <div id="backtotop" class="backtotop"><a href="#secrets"><img class="btp-arrow" src="images/scroll-down-b-arrow.svg" alt=""><img class="btp-bar" src="images/scroll-down-b-bar.svg" alt=""> BACK TO TOP </a></div>
-    <div class="btp-mobile"><a href="#secrets"><img src="images/gotop-icon.svg" alt=""></a></div>
+    <div class="scrolldown">
+        <a href="#secrets">
+         <span>SCROLL DOWN</span>
+        <p class="sd-bar" ></p>
+        <p class="sd-arrow"></p>
+        </a>
+    </div>
+    <div id="backtotop" class="backtotop"><a href="#top">
+        <p class="btp-arrow"></p>
+        <p class="btp-bar" ></p>
+        <span>BACK TO TOP</span> </a>
+    </div>
+    <div class="btp-mobile"><a href="#top"><img src="images/gotop-icon.svg" alt=""></a></div>
     <section class="top-banner slider">
         <div><img src="images/Banner_01.jpg"></div>
         <div><img src="images/Banner_01.jpg"></div>
@@ -156,8 +166,8 @@
                                 </div>
                                 <!--content-->
                                 <div class="acc-button mobile-acc">
-                                    <a><span class="circle"></span>
-                                        <p>更多美味秘訣</p><span class="circle2"></span>
+                                    <a>
+                                        <p>更多美味秘訣</p>
                                     </a>
                                     <hr class="blueline">
                                 </div>
@@ -507,8 +517,8 @@
                             </div>
                             <!--content-->
                             <div class="acc-button2">
-                                <a class="light-y-bg"><span class="circle"></span>
-                                    <p>更多美味河粉</p><span class="circle2"></span>
+                                <a class="light-y-bg">
+                                    <p>更多美味河粉</p>
                                 </a>
                                 <hr class="blueline">
                             </div>
@@ -577,7 +587,7 @@
                     <p class="appet-txt"><span>鳳梨涼拌雙耳</span><br><sub>Pineapple and Jelly Ear Salad</sub><br>$39 </p>
                 </li>
                 <li class="appet-list">
-                    <img src="images/menu_app01.png" alt="">
+                    <img src="images/menu_app03.png" alt="">
                     <p class="appet-txt"><span>黃金泡菜</span><br><sub>Taiwanese Golden Kimchi</sub><br>$39 </p>
                 </li>
                 <li class="appet-list">
@@ -660,13 +670,13 @@
                                         <p class="appet-txt"><span>越式奶茶冰沙</span><br>Vietnamese Milk Tea Slushy <br>$69 </p>
                                     </li>
                                     <li class="drink-list acc-drink" style="background-image: url(images/icecream.svg); background-repeat: no-repeat; background-position: center;">
-                                        <img src="images/drink4.png" alt="">
+                                        <img src="images/drink6.png" alt="">
                                         <p class="appet-txt"><span>芒果霜淇淋</span><br>Mango Soft-serve Ice Cream<br>$69 </p>
                                     </li>
                                 </ul>
                             </div>
                             <!--content-->
-                            <div class="acc-button mobile-acc" style="margin-top: -38px;">
+                            <div class="acc-button mobile-acc" style="margin-top: -35px;">
                                 <a><span class="circle"></span>
                                     <p>更多精選飲品</p><span class="circle2"></span>
                                 </a>
@@ -685,32 +695,32 @@
             <ul class="appet-wrapper-ul">
                 <li class="drink-list" style="background-image: url(images/coffee.svg); background-repeat: no-repeat; background-position: center;">
                     <img src="images/drink1.png" alt="">
-                    <p class="appet-txt"><span>經典越式煉乳咖啡</span><br>Classic Vietnamese Coffee with Condensed Milk <br>$79 </p>
+                    <p class="appet-txt"><span>經典越式煉乳咖啡</span><br><sub>Classic Vietnamese Coffee with Condensed Milk</sub> <br>$79 </p>
                 </li>
                 <li class="drink-list" style="background-image: url(images/drinks.svg); background-repeat: no-repeat; background-position: center;">
                     <img src="images/drink2.png" alt="">
-                    <p class="appet-txt"><span>熱帶鳳梨紅茶</span><br>Tropical Pineapple Black Tea<br>$69 </p>
+                    <p class="appet-txt"><span>熱帶鳳梨紅茶</span><br><sub>Tropical Pineapple Black Tea</sub><br>$69 </p>
                 </li>
                 <div class="dot-hr2"></div>
                 <li class="drink-list" style="background-image: url(images/drinks.svg); background-repeat: no-repeat; background-position: center;">
                     <img src="images/drink3.png" alt="">
-                    <p class="appet-txt"><span>鹹檸檬可樂</span><br>Coke with Salted Lemon<br>$69 </p>
+                    <p class="appet-txt"><span>鹹檸檬可樂</span><br><sub>Coke with Salted Lemon</sub><br>$69 </p>
                 </li>
             </ul>
             <div class="dot-hr"></div>
             <ul class="appet-wrapper-ul">
                 <li class="drink-list" style="background-image: url(images/slushy.svg); background-repeat: no-repeat; background-position: center;">
                     <img src="images/drink4.png" alt="">
-                    <p class="appet-txt"><span>百香果優酪冰沙</span><br>Calpis Slushy with Passion Fruit<br>$69 </p>
+                    <p class="appet-txt"><span>百香果優酪冰沙</span><br><sub>Calpis Slushy with Passion Fruit</sub><br>$69 </p>
                 </li>
                 <div class="dot-hr2"></div>
                 <li class="drink-list acc-drink" style="background-image: url(images/slushy.svg); background-repeat: no-repeat; background-position: center;">
                     <img src="images/drink5.png" alt="">
-                    <p class="appet-txt"><span>越式奶茶冰沙</span><br>Vietnamese Milk Tea Slushy <br>$69 </p>
+                    <p class="appet-txt"><span>越式奶茶冰沙</span><br><sub>Vietnamese Milk Tea Slushy </sub><br>$69 </p>
                 </li>
                 <li class="drink-list acc-drink" style="background-image: url(images/icecream.svg); background-repeat: no-repeat; background-position: center;">
-                    <img src="images/drink4.png" alt="">
-                    <p class="appet-txt"><span>芒果霜淇淋</span><br>Mango Soft-serve Ice Cream<br>$69 </p>
+                    <img src="images/drink6.png" alt="">
+                    <p class="appet-txt"><span>芒果霜淇淋</span><br><sub>Mango Soft-serve Ice Cream</sub><br>$69 </p>
                 </li>
             </ul>
         </div>
@@ -724,11 +734,11 @@
                 <div class="store">
                     <p>STORE 1.</p>
                 </div>
-                <h3>台北復興南店</h3>
-                <h4>TAIPEI FUXING S.</h4>
-                <p>台北市大安區復興南路一段144號</p>
-                <p>No.144, Sec. 1, Fuxing S. Rd., Da’an Dist., <br>Taipei City 106, Taiwan (R.O.C)</p>
-                <h5>+886.2.2711.2822</h5>
+                <h3>台北慶城街1號店</h3>
+                <h4>TTAIPEI URBAN ONE</h4>
+                <p>105 台北市松山區慶城街1號2F</p>
+                <p>2F., No. 1, Qingcheng St.,Songshan Dist., Taipei City 105, Taiwan (R.O.C.)</p>
+                <h5>+886.2.2719.0126</h5>
                 <div class="open">
                     <p>OPEN!</p>
                 </div>
@@ -747,11 +757,11 @@
                 <div class="store">
                     <p>STORE 2.</p>
                 </div>
-                <h3>台北復興南店</h3>
-                <h4>TAIPEI FUXING S.</h4>
-                <p>台北市大安區復興南路一段144號</p>
-                <p>No.144, Sec. 1, Fuxing S. Rd., Da’an Dist., <br>Taipei City 106, Taiwan (R.O.C)</p>
-                <h5>+886.2.2711.2822</h5>
+                <h3>台北慶城街1號店</h3>
+                <h4>TTAIPEI URBAN ONE</h4>
+                <p>105 台北市松山區慶城街1號2F</p>
+                <p>2F., No. 1, Qingcheng St.,Songshan Dist., Taipei City 105, Taiwan (R.O.C.)</p>
+                <h5>+886.2.2719.0126</h5>
                 <div class="open">
                     <p>OPEN!</p>
                 </div>
@@ -788,6 +798,7 @@
             </div>
         </div>
     </footer>
+    
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
     <!--indexjs-->

@@ -1,8 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700&subset=chinese-traditional');
-@import url('https://fonts.googleapis.com/css?family=Spectral:400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500');
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 @import url('https://fonts.googleapis.com/css?family=Asap:400,700');
+
+/* noto-sans-tc-regular - chinese-traditional */
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans TC Regular'), local('NotoSansTC-Regular'),
+       url('../fonts/noto-sans-tc-v4-chinese-traditional-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/noto-sans-tc-v4-chinese-traditional-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-tc-500 - chinese-traditional */
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Noto Sans TC Medium'), local('NotoSansTC-Medium'),
+       url('../fonts/noto-sans-tc-v4-chinese-traditional-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/noto-sans-tc-v4-chinese-traditional-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-tc-700 - chinese-traditional */
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans TC Bold'), local('NotoSansTC-Bold'),
+       url('../fonts/noto-sans-tc-v4-chinese-traditional-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/noto-sans-tc-v4-chinese-traditional-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 html,
 body {
@@ -22,6 +49,7 @@ body {
 
 * {
     box-sizing: border-box;
+    /*font-family: "Noto Sans TC", "Microsoft YaHei", "Microsoft JhengHei";*/
 }
 
 h1,
@@ -829,14 +857,17 @@ html[lang="en"] .news-btn {
 }
 
 .about-top-txt p {
+    font-size: 1.12em!important;
     padding-left: 15%;
     padding-right: 4%;
     letter-spacing: 1px;
-    line-height: 23px;
+    line-height: 25px;
     color: #000;
     text-align: justify;
 }
-
+.acc-content .about-top-txt p {
+    font-size: 1.2em!important;
+}
 .tag-y {
     color: #000;
     padding-left: 15%;
@@ -874,7 +905,7 @@ html[lang="en"] .news-btn {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     letter-spacing: .96px;
-    height: 86px!important;
+    height: 76px!important;
 }
 
 .tag-y p {
@@ -1209,27 +1240,43 @@ html[lang="en"] .news-btn {
 }
 
 .menu-txt h3 {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.35em;
+    line-height: 24px;
     letter-spacing: .96px;
     color: #000;
 }
 
 .menu-txt span {
     display: block;
-    font-size: 14px;
+    font-size: .8em;
+    line-height: 19px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     letter-spacing: .96px;
 }
 
+.acc-content .menu-txt h3, .acc-content2 .menu-txt h3 {
+    font-size: 1.4em;
+}
+
+.acc-content .menu-txt span, .acc-content2 .menu-txt span {
+    font-size: .87em;
+}
+
+.acc-content .menu-txt p, .acc-content2 .menu-txt p {
+    font-size: 1.15em;
+}
+.acc-content .prise-spice span, .acc-content2 .prise-spice span{
+    display: inline-block;
+    font-size: 1.3em;
+}
 .menu-txt p {
     font-family: 'Roboto', sans-serif;
-    font-size: 13px;
+    font-size: 1.05em;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 23px;
     letter-spacing: .5px;
-    text-align: justify;
+    text-align: left;
 }
 
 .dot-hr{
@@ -1267,7 +1314,7 @@ html[lang="en"] .news-btn {
 }
 .prise-spice span{
     display: inline-block;
-    font-size: 14px;
+    font-size: 1.28em;
     font-weight: 500;
     width: 45%;
 }
@@ -1464,10 +1511,18 @@ html[lang="en"] .news-btn {
     text-align: center;
     margin: 0 auto;
     padding: 0px 5px;
+    background-image: url(../images/btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #ffdc7a;
     z-index: 5;
 }
-
+.acc-button a:hover {
+    background-image: url(../images/btn-on.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;
+}
 .acc-button2 a {
     width: 194px;
     display: block;
@@ -1475,7 +1530,16 @@ html[lang="en"] .news-btn {
     text-align: center;
     margin: 0 auto;
     padding: 0px 5px;
+    background-image: url(../images/btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #fff3d3;
+    z-index: 5;
+}
+.acc-button2 a:hover {
+    background-image: url(../images/btn-on.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     z-index: 5;
 }
 .acc-button2.middle a {
@@ -1489,24 +1553,10 @@ html[lang="en"] .news-btn {
     z-index: 5;
 }
 
-.acc-button2.middle .circle {
-    background-color: #ffe8a7;
-}
-.acc-button2.middle a p {
-    background-color: #ffe8a7;
-}
-.acc-button2.middle p::before {
-    background-color: #ffe8a7;
-}
-.acc-button2.middle p::after {
-    background-color: #ffe8a7;
-}
+
 .acc-button a p {
     display: inline-block;
     position: relative;
-    border-top: 2.5px solid #1b1464;
-    border-bottom: 2.5px solid #1b1464;
-    background-color: #ffdc7a;
     color: #1b1464;
     letter-spacing: 1px;
     padding-top: 10px;
@@ -1521,9 +1571,6 @@ html[lang="en"] .news-btn {
 
 .acc-button a p:hover {
     display: inline-block;
-    border-top: 2.5px solid #1b1464;
-    border-bottom: 2.5px solid #1b1464;
-    background-color: #1b1464;
     color: #ffe8a7;
     letter-spacing: 1px;
     padding-top: 10px;
@@ -1535,13 +1582,10 @@ html[lang="en"] .news-btn {
 .acc-button2 a p {
     display: inline-block;
     position: relative;
-    border-top: 2.5px solid #1b1464;
-    border-bottom: 2.5px solid #1b1464;
-    background-color: #fff3d3;
     color: #1b1464;
     letter-spacing: 1px;
     padding-top: 10px;
-    padding-bottom: 9px;
+    padding-bottom: 10px;
     padding-right: 23px;
     padding-left: 17px;
     z-index: 3;
@@ -1552,78 +1596,12 @@ html[lang="en"] .news-btn {
 
 .acc-button2 a p:hover {
     display: inline-block;
-    border-top: 2.5px solid #1b1464;
-    border-bottom: 2.5px solid #1b1464;
-    background-color: #1b1464;
     color: #ffe8a7;
     letter-spacing: 1px;
     padding-top: 10px;
-    padding-bottom: 9px;
+    padding-bottom: 10px;
     padding-right: 23px;
     padding-left: 17px;
-}
-
-.acc-button .circle {
-    display: inline-block;
-    position: absolute;
-    left: 8px;
-    top: 0px;
-    border-radius: 50%;
-    width: 43px;
-    height: 44px;
-    border: 2.5px solid #1b1464;
-    background-color: #ffdc7a;
-    z-index: 2;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-.acc-button .circle2 {
-    display: inline-block;
-    position: absolute;
-    right: 8px;
-    top: 0px;
-    border-radius: 50%;
-    width: 43px;
-    height: 44px;
-    border: 2.5px solid #1b1464;
-    background-color: #ffdc7a;
-    z-index: 2;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-.acc-button2 .circle {
-    display: inline-block;
-    position: absolute;
-    left: 8px;
-    top: 0px;
-    border-radius: 50%;
-    width: 43px;
-    height: 44px;
-    border: 2.5px solid #1b1464;
-    background-color: #fff3d3;
-    z-index: 2;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-.acc-button2 .circle2 {
-    display: inline-block;
-    position: absolute;
-    right: 8px;
-    top: 0px;
-    border-radius: 50%;
-    width: 43px;
-    height: 44px;
-    border: 2.5px solid #1b1464;
-    background-color: #fff3d3;
-    z-index: 2;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
 }
 
 .acc-button p::before {
@@ -1635,7 +1613,6 @@ html[lang="en"] .news-btn {
     border-radius: 50%;
     width: 39px;
     height: 38px;
-    background-color: #ffdc7a;
     z-index: 2;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -1646,12 +1623,11 @@ html[lang="en"] .news-btn {
     content: '';
     display: inline-block;
     position: absolute;
-    right: -21px;
-    top: 0px;
+    right: -15px;
+    top: 1px;
     border-radius: 50%;
     width: 39px;
     height: 38px;
-    background-color: #ffdc7a;
     background-image: url(../images/arrow-b.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1668,7 +1644,6 @@ html[lang="en"] .news-btn {
     border-radius: 50%;
     width: 39px;
     height: 37px;
-    background-color:  #fff3d3;
     z-index: 2;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -1679,12 +1654,11 @@ html[lang="en"] .news-btn {
     content: '';
     display: inline-block;
     position: absolute;
-    right: -21px;
-    top: 0px;
+    right: -20px;
+    top: 3px;
     border-radius: 50%;
     width: 39px;
     height: 37px;
-    background-color: #fff3d3;
     background-image: url(../images/arrow-b.svg);
     background-position: right center;
     background-repeat: no-repeat;
@@ -1694,7 +1668,7 @@ html[lang="en"] .news-btn {
 
 .acc-button .active p::after {
     transform: rotate(0deg);
-    right: -21px;
+    right: -15px;
     background-position: center;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -1703,7 +1677,6 @@ html[lang="en"] .news-btn {
 
 .acc-button p::after {
     transform: rotate(180deg);
-    right: -21px;
     background-position: center;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -1712,7 +1685,8 @@ html[lang="en"] .news-btn {
 
 .acc-button2.mobile-acc .active p::after {
     transform: rotate(0deg);
-    right: -21px;
+    right: -14px;
+    top: 3px;
     background-position: center;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -1721,6 +1695,7 @@ html[lang="en"] .news-btn {
 
 .acc-button2.mobile-acc p::after {
     transform: rotate(180deg);
+    top: 0px;
     background-position: center;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -1729,7 +1704,8 @@ html[lang="en"] .news-btn {
 
 .acc-button2 .active p::after {
     transform: rotate(180deg);
-    right: -21px;
+    right: -16px;
+    top: 0px;
     background-position: center;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -1746,18 +1722,17 @@ html[lang="en"] .news-btn {
 
 .acc-button p:hover:after,
 .acc-button p:hover:before {
-    background-color: #1b1464;
     width: 40px;
     height: 41px;
 }
 
 .acc-button p:hover:after {
-    right: -23px;
+    right: -16px;
     top: 0px;
     background-image: url(../images/arrow.svg);
 }
 .acc-button .active p:hover:after {
-    right: -21px;
+    right: -16px;
     background-image: url(../images/arrow.svg);
 }
 
@@ -1766,13 +1741,13 @@ html[lang="en"] .news-btn {
 }
 .acc-button2 p:hover:after,
 .acc-button2 p:hover:before {
-    background-color: #1b1464;
+
     width: 40px;
     height: 41px;
 }
 
 .acc-button2 .active p:hover:after {
-    right: -23px;
+    right: -21px;
     top: -1px;
     background-image: url(../images/arrow.svg);
 }
@@ -1783,7 +1758,7 @@ html[lang="en"] .news-btn {
 }
 
 .acc-button2 p:hover:after {
-    right: -23px;
+    right: -20px;
     top: 0px;
     background-image: url(../images/arrow.svg);
 }
@@ -1943,19 +1918,83 @@ html[lang="en"] .news-btn {
 .scrolldown{
     font-family: 'Asap', sans-serif;
     position: absolute;
+    width: 35px;
     right: 5%;
     font-weight: 700;
     letter-spacing: 2px;
-    top: 76%;
+    top: 86%;
      -webkit-writing-mode: vertical-lr;
      -ms-writing-mode: tb-lr;
     writing-mode: vertical-rl; 
-    z-index: 9;
+    z-index: 20;
 }
-.scrolldown img{
+.scrolldown a{
+    display: block;
     position: relative;
-    width: 10px;
+    top: 0%;
+    width: 35px;
+    height: 320px;
+    z-index: 20;
 }
+
+.sd-bar{
+    display: block;
+    position: relative;
+    width: 3px;
+    height: 35px;
+    right: 7px;
+    margin-top: 40px;
+    border-radius: 1.5px;
+    background-color:  #000;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.sd-arrow{
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    top: 62px;
+    right: 11px;
+    border-radius: 1.5px;
+    background-color:  #000;
+    transform: rotate(.4turn);
+    -ms-transform: rotate(.4turn);     
+-moz-transform:rotate(.4turn);     
+-webkit-transform:rotate(.4turn);   
+-o-transform: rotate(.4turn);   
+    z-index: 10;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.scrolldown span{
+    display: block;
+    position: absolute;
+    height: 130px;
+    top: -80px;
+    right: 0px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-writing-mode: vertical-lr;
+     -ms-writing-mode: tb-lr;
+    writing-mode: vertical-rl; 
+}
+.scrolldown a:hover .sd-bar{
+    width: 3px;
+    height: 65px;
+}
+.scrolldown a:hover .sd-arrow{
+    top: 92px;
+}
+.scrolldown a:hover span{
+    top: -80px;
+}
+
+
+
 .btp-mobile{
     display: none;
 
@@ -1983,7 +2022,6 @@ html[lang="en"] .news-btn {
      -ms-writing-mode: tb-lr;
     writing-mode: vertical-rl; 
     z-index: 9;
-     transform: translateY(50px);
 }
 .backtotop a{
     display: -webkit-flex;
@@ -1991,33 +2029,63 @@ html[lang="en"] .news-btn {
     display: -ms-flex;
     /* IE10 */
     display: flex;
-    flex-direction: row;
     justify-content: center;
     color: #1b1464;
     height: 450px;
 }
 .btp-bar{
-    width: 10px;
-    height: 25px;
-    margin-bottom: 9px;
-    transform: scaleY(1)!important;
+    display: block;
+    position: relative;
+    width: 3px;
+    height: 35px;
+    margin-top: -12px;
+    border-radius: 1.5px;
+    background-color:  #1b1464;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .btp-arrow{
-    position: relative;
-    width: 10px;
-    right: 7px;
-    bottom: -5px;
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    top: 200px;
+    right: 4px;
+    border-radius: 1.5px;
+    background-color:  #1b1464;
+    transform: rotate(-.4turn);
+    -ms-transform: rotate(-.4turn);     
+-moz-transform:rotate(-.4turn);     
+-webkit-transform:rotate(-.4turn);   
+-o-transform: rotate(-.4turn);   
+    z-index: 10;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.backtotop span{
+    display: block;
+    position: absolute;
+    height: 130px;
+    top: 250px;
+    right: -5px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-writing-mode: vertical-lr;
+     -ms-writing-mode: tb-lr;
+    writing-mode: vertical-rl; 
 }
 .backtotop a:hover .btp-bar{
-    width: 10px;
-    height: 55px;
-    transform: scaleY(2.5)!important;
+    width: 3px;
+    height: 65px;
 }
-.btp-arrow:hover{
-    position: relative;
-    width: 10px;
-    right: 6.5px;
-    bottom: -5px;
+.backtotop a:hover .btp-arrow{
+    top: 184px;
+}
+.backtotop a:hover span{
+    top: 260px;
 }
 .backtotop.fade-in{
     opacity: 1;
@@ -2032,19 +2100,12 @@ html[lang="en"] .news-btn {
     position: relative;
     float: left;
     display: inline-block;
-    width: 10px;
     transform: rotate(180deg);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-.backtotop span{
-    display: inline-block;
-   height: 2.5px;
-   width: 25px;
-   background-color: #1b1464;
-   transform: rotate(90deg);
-}
+
 .top-banner {
     width: 100vw;
     height: 100vh;
@@ -2448,18 +2509,19 @@ footer {
     margin-bottom: 5%;
 }
 .map-info p{
-    font-size: 13.5px;
+    font-size: 1.09em;
     line-height: 22px;
 }
 .map-info h5{
     font-family: 'Roboto', sans-serif; 
     display: block;
     margin: 30px 0;
-    font-size: 17px;
+    font-size: 1.5em;
     line-height: 22px;
 }
 
 .store{
+    font-size: .9em;
     margin-bottom: 2%;
     height: 25px;
     font-family: 'Roboto', sans-serif; 
@@ -2476,6 +2538,7 @@ footer {
     line-height: 26px;
 }
 .open{
+    font-size: .9em;
     margin-bottom: 2%;
     height: 25px;
     font-family: 'Roboto', sans-serif; 
@@ -2492,6 +2555,7 @@ footer {
     line-height: 26px;
 }
 .more{
+    font-size: .9em;
     margin-top: 7%;
     height: 25px;
     font-family: 'Roboto', sans-serif; 
@@ -2626,18 +2690,21 @@ footer {
 .appet-txt{
     color: #000;
     font-family: 'Roboto', sans-serif; 
-    font-size: 14px;
+    font-size: 1.08em;
     line-height: 18px;
     letter-spacing: .5px;
     font-weight: 500;
 }
 .appet-txt span{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 14px;
+    font-size: 1.2em!important;
     line-height: 18px;
 }
 .appet-txt sub{
-    font-size: 14px;
+    font-family: 'Roboto', sans-serif!important; 
+    display: block;
+    font-size: 15px!important;
+    margin-bottom: -8px;
 }
 .drink-bg{
     display: block;
@@ -2860,7 +2927,7 @@ display: inline-block; width: 60%;
 
 @media only screen and (max-width: 2560px) {
     .top-banner img {
-    width: 100vw;
+    width: 115vw;
     height: auto;
    }
     .nav-container {
@@ -2872,7 +2939,7 @@ display: inline-block; width: 60%;
     top: 7%;
     right: 0;
     width: 80%;
-    height: 980px;
+    height: 1080px;
     z-index: 1;
     background-color: #ffe8a7;
    }
@@ -2908,6 +2975,11 @@ display: inline-block; width: 60%;
     padding-top: 2%;
     padding-bottom: 52%;
     }
+    .about-top-img {
+    width: 48%;
+    min-height: 850px;
+    overflow: hidden;
+    }
    .appet-bg {
     display: block;
     position: relative;
@@ -2925,7 +2997,7 @@ display: inline-block; width: 60%;
     position: relative;
     width: 80%;
     margin-left: 20%;
-    margin-top: -34%;
+    margin-top: -37%;
     margin-bottom: -40px;
     background-color: #ffdc7a;
     padding-top: 44%;
@@ -2996,7 +3068,7 @@ display: inline-block; width: 60%;
    }
    .map-slider .slick-dots {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     right: 0;
     display: block;
     width: 34%;
@@ -3025,45 +3097,32 @@ display: inline-block; width: 60%;
     width: 100%;
     height: 69vh;
 }
-   .acc-button2 p::before {
-    top: 1px;
-   }
-   .acc-button2 p::after {
-    top: 1px;
-   }
-   .acc-button2 .active p::before {
-    top: 1px;
-   }
-   .acc-button2 .active p::after {
-    top: 1px;
-   }
+  
 }
 
-@media only screen and (max-width: 1910px) {
+@media only screen and (max-width: 1960px) {
     .nav-container {
         padding-left: 5%;
         padding-right: 5%;
     }
+    .about-top-img {
+    width: 48%;
+    min-height: 750px;
+    overflow: hidden;
+    }
+    .map-slider .slick-dots {
+    position: absolute;
+    bottom: 10%;
+     }
   
 }
 
 @media only screen and (max-width: 1480px) {
 
-     .acc-button2 p::before {
-    top: 1px;
-   }
-   .acc-button2 p::after {
-    top: 1px;
-   }
-   .acc-button2 .active p::before {
-    top: 1px;
-   }
-   .acc-button2 .active p::after {
-    top: 1px;
-   }
+   
     .top-banner img {
-    width: auto;
-    height: 100vh;
+    width: 110vw;
+    height: auto;
    }
     .nav-container {
         padding-left: 5%;
@@ -3169,18 +3228,7 @@ display: inline-block; width: 60%;
     background-position: right top;
     background-size: 16%;
    }
-    .acc-button2 p::before {
-    top: 0px;
-   }
-   .acc-button2 p::after {
-    top: 0px;
-   }
-   .acc-button2 .active p::before {
-    top: 0px;
-   }
-   .acc-button2 .active p::after {
-    top: 0px;
-   }
+    
    .map-slider .slick-dots {
     position: absolute;
     bottom: 16%;
@@ -3195,18 +3243,6 @@ display: inline-block; width: 60%;
 }
 @media only screen and (max-width: 1380px) {
 
-   .acc-button2 p::before {
-    top: 1px;
-   }
-   .acc-button2 p::after {
-    top: 1px;
-   }
-   .acc-button2 .active p::before {
-    top: 1px;
-   }
-   .acc-button2 .active p::after {
-    top: 1px;
-   }
 
     #menu {
     position: relative;
@@ -3376,26 +3412,26 @@ display: inline-block; width: 60%;
 }
 @media screen and (max-height: 1440px) {
     .top-banner img {
-    width: auto;
-    height: 100vh;
+    width: 110vw;
+    height: auto;
     }
     .about {
     position: relative;
     width: 100%;
     background-color: #ffdc7a;
     padding-top: 2%;
-    padding-bottom: 37%;
+    padding-bottom: 1180px;
     }
     #menu {
     position: relative;
-    top: -18%;
+    top: -720px;
    }
    .appet-bg {
     display: block;
     position: relative;
     width: 90%;
     margin-right: 10%;
-    margin-top: 0%;
+    margin-top: -480px;
     margin-bottom: 90px;
     background-color: #ffe8a7;
     padding-right: 8%;
@@ -3427,19 +3463,19 @@ display: inline-block; width: 60%;
 
 @media screen and (max-height: 1367px) {
     .top-banner img {
-    width: auto;
-    height: 100vh;
+    width: 110vw;
+    height: auto;
     }
     .about {
     position: relative;
     width: 100%;
     background-color: #ffdc7a;
     padding-top: 2%;
-    padding-bottom: 980px;
+    padding-bottom: 1100px;
     }
     #menu {
     position: relative;
-    top: -620px;
+    top: -700px;
    }
    .appet-bg {
     display: block;
@@ -3474,7 +3510,32 @@ display: inline-block; width: 60%;
     height: 580px;
    }
 }
+@media screen and (max-height: 1080px) {
+    .about {
+    position: relative;
+    width: 100%;
+    background-color: #ffdc7a;
+    padding-top: 2%;
+    padding-bottom: 860px;
+    }
+    #menu {
+    position: relative;
+    top: -610px;
+   }
+}
+@media screen and (max-width: 1990px) , screen and (max-height: 890px) {
+  .top-banner img {
+        width: 110vw;
+        height: auto;
+    }
+}
 
+@media screen and (max-width: 1440px) ,screen and (max-height: 900px) {
+    .top-banner img {
+        width: auto;
+        height: 130vh;
+    }
+}
 @media screen and (max-height: 700px) {
     .top-banner img {
         width: 100vw;
@@ -3503,7 +3564,10 @@ display: inline-block; width: 60%;
 }
 .appet-txt sub{
     display: block;
-    height: 15px;
+    font-size: 12px!important;
+    height: 19px;
+    line-height: 16px;
+    margin-bottom: 0px;
 }
     .appet-wrapper-ul {
     width: auto!important;
@@ -3515,34 +3579,8 @@ display: inline-block; width: 60%;
     overflow: hidden;
     margin-top: 0%;
    }
-    .acc-button2 p::before {
-    top: 0px;
-   }
-   .acc-button2 p::after {
-    top: 1px;
-   }
-   .acc-button2 .active p::before {
-    top: 0px;
-   }
-   .acc-button2 .active p::after {
-    top: 1px;
-   }
-
-   .acc-button p::before {
-    top: 0px;
-   }
-   .acc-button p::after {
-    top: 0px;
-   }
-   .acc-button .active p::before {
-    top: 0px;
-   }
-   .acc-button .active p::after {
-    top: 0px;
-   }
-   .acc-button .active p:hover:after {
-    top: -1px;
-   }
+   
+   
    .more {
     margin-top: 7%;
     height: 25px;
@@ -3697,132 +3735,7 @@ display: inline-block; width: 60%;
         float: left;
     }
 
-    .reserv-left {
-        width: 100%;
-    }
-
-    .reserv-right {
-        width: 100%;
-    }
-
-    .reserv-txt {
-        padding-left: 0%;
-    }
-
-    .reserv-content {
-        flex-direction: column;
-        margin-top: 12%;
-    }
-
-    .reserv-content2 {
-        flex-direction: column;
-        margin-top: 12%;
-    }
-
-    .news-detail-txt {
-        flex-direction: column;
-    }
-
-    .news-txt-left {
-        width: 100%;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    .news-txt-right {
-        width: 100%;
-    }
-
-    .news-btn-left {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .news-btn-right {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .news-detail-btn {
-        flex-direction: column-reverse;
-    }
-
-    .news-btn-left .btn-2 {
-        width: 100%;
-        margin: 1em 0;
-    }
-
-    .news-btn-right .btn-2 {
-        margin: 0 0;
-        width: 48%;
-    }
-
-    .news-banner .slick-slide img {
-        height: 100%;
-        width: 100vw;
-    }
-
-    .news-content.container {
-        width: 100vw;
-    }
-
-    .news-banner .slide-arrow {
-        top: 55%;
-    }
-
-    .news-banner .prev-arrow {
-        left: -2% !important;
-    }
-
-    .news-banner .prev-arrow:hover {
-        left: -3% !important;
-    }
-
-    .news-banner .next-arrow {
-        right: -2% !important;
-    }
-
-    .news-banner .next-arrow:hover {
-        right: -3% !important;
-    }
-
-    .traffic-slide .slick-slide {
-        margin: 0px 0px;
-    }
-
-    .traffic-where h5 {
-        width: 55%;
-        top: -78px;
-        left: 22%;
-        font-size: 18px;
-        letter-spacing: 4px;
-    }
-
-    .reserv-detail-txt li {
-        display: inline-block;
-        width: 100%;
-        padding: 0;
-    }
-
-    .reserv-detail-txt li:first-child {
-        border-right: 0px;
-    }
-
-    .traffic-slide-txt h3 {
-        font-size: 16px !important;
-        line-height: 26px;
-        letter-spacing: 3px;
-        padding: 15px 0;
-        font-weight: 500;
-    }
-
-    .traffic-slide-txt p {
-        font-size: 12px !important;
-        line-height: 30px;
-        letter-spacing: 2px;
-        padding: 0px 0;
-        font-weight: 400;
-    }
+    
     .menu-wrapper ul {
     display: -webkit-flex;
     display: -ms-flex;
@@ -3891,7 +3804,10 @@ display: inline-block; width: 60%;
     .mobile-close{
         display: none!important;
     }
-    .mobile-acc{
+    .mobile-acc {
+    display: block;
+    }
+    #appetizer .mobile-acc, #drink-mobile .mobile-acc {
     display: block;
     margin-top: -24px;
    }
@@ -3928,6 +3844,8 @@ display: inline-block; width: 60%;
     .about-top-img img {
      height : 100%;
     padding-right:0%;
+    top: 150px;
+    margin-top: -300px;
 }
     .about-top-img ul{
         margin: 0 auto;
@@ -4260,20 +4178,7 @@ display: inline-block; width: 60%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
      }
-     .acc-button2 a p {
-    padding-bottom: 9.5px;
-     }
 
-.acc-button2 a p:hover {
-    padding-bottom: 9.5px;
-    }
-     .acc-button a p {
-    padding-bottom: 9.5px;
-}
-
-.acc-button a p:hover {
-    padding-bottom: 9.5px;
-    }
     .drink-list{
     display: inline-block;
    width:42%!important;
@@ -4546,7 +4451,7 @@ display: inline-block; width: 60%;
      .about-top-txt .tag-y {
     padding-left: 0%;
     margin-top: 0px;
-    margin-left: -18px;
+    margin-left: 0px;
     }
     .nav1200-right ul {
      width: 85%;
@@ -4570,7 +4475,7 @@ display: inline-block; width: 60%;
 }
      .about-title {
      position: absolute;
-    top:-245%;
+    top:-209%;
     width: 100%;
     }
     .about-title img {
@@ -4581,12 +4486,18 @@ display: inline-block; width: 60%;
     min-height: 400px;
     margin-bottom: 30px;
     }
+     .about-top-img img {
+     height : 100%;
+    padding-right:0%;
+    top: 0px;
+    margin-top: 0px;
+    }
     .light-yellow-bg {
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
-    height: 980px;
+    height: 1150px;
     z-index: 1;
     background-color: #ffe8a7;
    }
@@ -4629,9 +4540,9 @@ display: inline-block; width: 60%;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
-    background-size: 90%;
+    background-size: 80%;
     width: 100%;
-    height: 150px;
+    height: 180px;
     top: -40px;
     left: 0px;
     padding-bottom: 35%;
@@ -4650,7 +4561,7 @@ display: inline-block; width: 60%;
     margin-top: -88px;
     }
     .menu-subtitle {
-    padding-top: 0px;
+    padding-top: 20px;
     }
     .appet-bg {
     width: 100%;
@@ -4728,9 +4639,9 @@ display: inline-block; width: 60%;
     padding-right: 5px;
     transition: all 0.4s ease;
     }
-    .mobile-acc {
+    #appetizer .mobile-acc, #drink-mobile .mobile-acc {
     display: block;
-    margin-top: -24px;
+    margin-top: -21px;
     }
     .map-info {
     display: inline-block;
@@ -4753,7 +4664,7 @@ display: inline-block; width: 60%;
    }
     .about-title {
      position: absolute;
-    top:-205%;
+    top:-180%;
     width: 100%;
     }
     .map-info {
@@ -4783,14 +4694,19 @@ display: inline-block; width: 60%;
 }
 
 @media only screen and (max-width: 330px) {
+    .about-top-img {
+    width: 100%;
+    min-height: 400px;
+    margin-bottom: 0px;
+    }
     #menu {
     width: 85%;
     position: relative;
     top: 0px;
   }
-  .mobile-acc {
+  #appetizer .mobile-acc, #drink-mobile .mobile-acc {
     display: block;
-    margin-top: -25px;
+    margin-top: -21px;
 }
     .about {
     padding-top: 48%;
@@ -4798,7 +4714,7 @@ display: inline-block; width: 60%;
   }
       .about-title {
      position: absolute;
-    top:-185%;
+    top:-155%;
     width: 100%;
     }
     .map-info {
