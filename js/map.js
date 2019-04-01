@@ -42,7 +42,7 @@ function init() {
 
     var mapElement = document.getElementById('map');
     var image = {
-    url: 'http://pgnini.org/phofun/images/map-icon.svg',
+    url: 'http://pgnini.org/phf-b/images/map-icon.svg',
     scaledSize: new google.maps.Size(40, 60),
      }
     var map = new google.maps.Map(mapElement, mapOptions);

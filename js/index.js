@@ -249,29 +249,25 @@ $(document).ready(function(){
 
 
  (function($) {
-    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
-    $('.accordion > li:eq(1) a').addClass('active').next().slideDown();
-    $('.accordion > li:eq(2) a').addClass('active').next().slideDown();
-    $('.accordion > li:eq(3) a').addClass('active').next().slideDown();
-    $('.accordion > li:eq(4) a').addClass('active').next().slideDown();
-
-    $('.accordion a').click(function(j) {
+  
+   $('.accordion a').click(function(j) {
         var dropDown = $(this).closest('.acc-list').find('.acc-content');
-
-        $(this).closest('.accordion').find('.acc-content').not(dropDown).slideUp();
-
+       
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
-        } else {
+        } 
+        else {
             $(this).closest('.accordion').find('a.active').removeClass('active');
             $(this).addClass('active');
         }
-
         dropDown.stop(false, true).slideToggle();
-
         j.preventDefault();
+       
     });
+    
+
 })(jQuery);
+
 
  (function($) {
 
@@ -296,19 +292,7 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function() {
-    // This will fire when document is ready:
-    $(window).resize(function() {
-        // This will fire each time the window is resized:
-        if($(window).width() >= 830) {
-            // if larger or equal
-            $('.acc-content').show();
-        } else {
-            // if smaller
-            $('.acc-content').hide();
-        }
-    }).resize(); // This will simulate a resize to trigger the initial run.
-});
+
 
 function closeFunction() {
   document.getElementById("toggle").checked=false
